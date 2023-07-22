@@ -1,7 +1,8 @@
+# IoT-based-Smart-Agriculture-Monitoring-System-using-NodeMCU
 Agricultural development is crucial for the progress of nations, but traditional agricultural practices often face challenges that hinder growth. To overcome these issues, modernizing agriculture through technology is essential. Technological advancements have significantly impacted agriculture, especially in irrigation, where various smart irrigation systems have been developed to address water scarcity. Intelligent irrigation systems optimize watering schedules and automatically adjust run times based on the specific needs of the landscape.
 
 To tackle these challenges, we have designed a smart irrigation system. It utilizes a capacitive soil moisture sensor to measure soil moisture levels and a DHT11 Humidity Temperature Sensor to monitor air temperature and humidity. The water pump is controlled by a 5V Power Relay. When the soil moisture sensor detects low moisture levels, the water pump is activated, automatically irrigating the land. The pump turns off once the soil reaches a sufficient moisture level. To remotely monitor the system, we utilize the NodeMCU ESP-8266.
 
 By implementing this smart irrigation system, we aim to revolutionize agricultural practices, improve water efficiency, and ensure optimal crop growth. With automated irrigation and remote monitoring capabilities, farmers can enhance productivity and reduce water wastage. Embracing technology in agriculture will lead to sustainable growth and pave the way for agricultural development in the nation.
-# IoT-based-Smart-Agriculture-Monitoring-System-using-NodeMCU
+
 This system uses IoT to provide live data on temperature, humidity, soil moisture, and soil temperature to farmers, helping them increase their yield and quality of products. The system is powered by NodeMCU and consists of a DHT11 sensor, Moisture sensor, DS18B20 Sensor Probe, LDR, Water Pump, and 12V led strip.
