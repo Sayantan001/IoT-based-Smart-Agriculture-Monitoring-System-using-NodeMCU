@@ -66,4 +66,27 @@ The circuit diagram above shows the components. For the wiring, use the pin tabl
 4. Check the pins, the relay polarity (`RELAY_ACTIVE_HIGH`) and the rain-sensor polarity (`RAIN_ACTIVE_LOW`) against your hardware.
 5. Open `firmware/smart_irrigation/smart_irrigation.ino`, select your NodeMCU board, and upload.
 
-## How the
+## How the irrigation logic works
+
+1. Every 5 seconds the sketch reads all sensors.
+2. If the soil is at or below 30% and it is not raining and the pump is not cooling down, the pump turns on.
+3. The pump turns off when the soil reaches 45%, when rain is detected, or after 60 seconds, whichever comes first. After a 60-second stop, it waits 10 minutes before it can start again.
+4. All thresholds and timings are constants at the top of the sketch.
+
+## Limitations
+
+- The rewritten firmware (v2) has not yet been validated on the hardware. Check the pin mapping and calibrate before relying on it.
+- Soil moisture is measured at a single point.
+- There is no water-level (tank) sensor, so the pump can run dry. The 60-second limit reduces the risk.
+- ThingSpeak free accounts allow an update every 15 seconds at the fastest.
+
+## Possible improvements
+
+- Add a tank water-level sensor and stop the pump when the tank is empty
+- Add a weather-based watering schedule
+- Send mobile alerts (for example, through ThingSpeak React)
+- Support multiple soil sensors
+
+## License
+
+GPL-3.0
